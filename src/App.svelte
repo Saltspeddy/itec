@@ -1,7 +1,8 @@
 <script>
   import { text, validate_each_argument } from 'svelte/internal';
 
-    let user, verses=" ", temperature, max_tokens, value=0, imageUrl;
+    let user, verses=" ", temperature, max_tokens, value=0, imageUrl,bgUrl = "../dist/assets/bg/background_waves.png";
+
     function handleSubmit(event) {
       if(user === undefined){
         event.preventDefault();     
@@ -76,7 +77,7 @@
 </script>
 
 <main class="max-h-[100vh] w-[100vw] overflow-y-hidden">
-  <div class="h-[100vh] w-[100vw] bg-cover bg-center bg-no-repeat shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-[#0A5C71] flex flex-col justify-center items-center" style="background-image: url(../dist/assets/bg/background_waves.png);">
+  <div class="h-[100vh] w-[100vw] bg-cover bg-center bg-no-repeat shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-[#0A5C71] flex flex-col justify-center items-center" style="background-image: url({bgUrl});">
       <div class="rounded-t-full rounded-b-2xl flex flex-col items-center max-[766px]:rounded-[60px]">
           <h1 class="text-transparent bg-gradient-to-r from-[#FF0000] to-[#FE8300] font-Montserrat lg:text-[14em] md:text-[10em] text-[4em] mb-10" style="-webkit-background-clip: text;">Poetique</h1>
           <div class="flex justify-between  items-center">
