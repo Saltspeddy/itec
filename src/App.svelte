@@ -1,7 +1,7 @@
 <script>
   import { text, validate_each_argument } from 'svelte/internal';
 
-    let user, verses=" ", temperature, max_tokens, value=0, imageUrl,bgUrl = "../dist/assets/bg/background_waves.png";
+    let user, verses=" ", temperature, max_tokens, value=0, imageUrl,bgUrl = "../dist/assets/background_wave.png";
 
     function handleSubmit(event) {
       if(user === undefined){
