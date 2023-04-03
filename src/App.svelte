@@ -15,7 +15,7 @@
         formData.append('promptInput', user);
         // @ts-ignore
         value = value.toString();
-        fetch('http://127.0.0.1:8000/'+value, {
+        fetch('https://robi3377.pythonanywhere.com/'+value, {
         method: 'POST',
         body: formData
         })
