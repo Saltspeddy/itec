@@ -78,7 +78,7 @@
 </script>
 
 <main class="max-h-[100vh] w-[100vw] overflow-y-hidden">
-  <div class="h-[100vh] w-[100vw] bg-cover bg-center bg-no-repeat shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-[#0A5C71] flex flex-col justify-center items-center" style="background-image: url(./src/assets/background_waves.png);">
+  <div class="h-[100vh] w-[100vw] bg-cover bg-center bg-no-repeat shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-[#0A5C71] flex flex-col justify-center items-center" style="background-image: url(./dist/assets/background_waves.png);">
       <div class="rounded-t-full rounded-b-2xl flex flex-col items-center max-[766px]:rounded-[60px]">
           <h1 class="text-transparent bg-gradient-to-r from-[#FF0000] to-[#FE8300] font-Montserrat lg:text-[14em] md:text-[10em] text-[4em] mb-10" style="-webkit-background-clip: text;">Poetique</h1>
           <div class="flex justify-between  items-center">
@@ -117,9 +117,6 @@
             <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_Wh2iKs.json"  background="transparent"  speed="1.2"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>  
           </div>
               <button on:click={readText} class=" absolute right-2 bottom-2 p-1 hover:bg-slate-500 rounded-full duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
-              </svg>
           </button>
       </div>
       <div id="output-image" class="z-10 bg-cover bg-center bg-no-repeat bg-slate-600 h-[100vw] w-[100vw] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-[#0A5C71] md:h-[60vh] md:w-[60vh] md:rounded-3xl" style="background-image: url({imageUrl});">
