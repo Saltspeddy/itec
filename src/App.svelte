@@ -1,7 +1,9 @@
+<link rel="stylesheet" href="output.css">
+
 <script>
   import { text, validate_each_argument } from 'svelte/internal';
 
-    let user, verses, temperature, max_tokens, value, imageUrl;
+    let user, verses=" ", temperature, max_tokens, value=0, imageUrl;
     function handleSubmit(event) {
       if(user === undefined){
         event.preventDefault();     
@@ -11,6 +13,7 @@
         event.preventDefault();
         const formData = new FormData();
         formData.append('promptInput', user);
+        // @ts-ignore
         value = value.toString();
         fetch('http://127.0.0.1:8000/'+value, {
         method: 'POST',
@@ -19,6 +22,8 @@
         .then(response => response.json())
         .then(data => {
             verses=data.poem;
+            console.log(3);
+            imageUrl=data.img;
         });
         console.log(temperature);
         document.querySelector("main").style.maxHeight = "none";
@@ -66,12 +71,13 @@
     for( let i = 0 ; i < 3 ; i++)
       // @ts-ignore
       if(i != param)document.getElementById(i).style.backgroundColor = "#1D263B";
+      // @ts-ignore
       document.getElementById(i).style.backgroundColor;
   }
 
 </script>
 
-<main class="max-h-[100vh] w-[100vw]">
+<main class="max-h-[100vh] w-[100vw] overflow-y-hidden">
   <div class="h-[100vh] w-[100vw] bg-cover bg-center bg-no-repeat shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] shadow-[#0A5C71] flex flex-col justify-center items-center" style="background-image: url(./src/assets/background_waves.png);">
       <div class="rounded-t-full rounded-b-2xl flex flex-col items-center max-[766px]:rounded-[60px]">
           <h1 class="text-transparent bg-gradient-to-r from-[#FF0000] to-[#FE8300] font-Montserrat lg:text-[14em] md:text-[10em] text-[4em] mb-10" style="-webkit-background-clip: text;">Poetique</h1>

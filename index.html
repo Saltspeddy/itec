@@ -5,6 +5,7 @@
     <link rel="shortcut icon" type="x-icon" href="./src/assets/simplistic_logo_1-removebg-preview.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poetique</title>
+    
   </head>
   <body class="bg-[#1D263B] font-Montserrat" style="overflow-x: hidden;">
     <div id="app">
@@ -14,4 +15,12 @@
   </body>
 </html>
 <script>
+  import './app.css'
+  // @ts-ignore
+  import App from './App.svelte'
+
+  const app = new App({
+    target: document.getElementById('app'),
+  })
+  export default app
 </script>
